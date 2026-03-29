@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metro Navigation System</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-canvas">
+        <div class="glow-orb orb-1"></div>
+        <div class="glow-orb orb-2"></div>
+    </div>
+    
+    <div class="app-container">
+        <header>
+            <h1>Metro Navigator</h1>
+            <p>DSA Project integration with C++ Core</p>
+        </header>
+
+        <main class="grid-layout">
+            <!-- Add Station Panel -->
+            <section class="glass-panel card">
+                <h2>Add Station</h2>
+                <form id="add-station-form">
+                    <div class="input-group">
+                        <label for="station-name">Station Name</label>
+                        <input type="text" id="station-name" placeholder="e.g. Central Station" required />
+                    </div>
+                    <button type="submit" class="btn primary-btn">Add Station</button>
+                </form>
+            </section>
+
+            <!-- Add Connection Panel -->
+            <section class="glass-panel card">
+                <h2>Add Connection</h2>
+                <form id="add-connection-form">
+                    <div class="input-row">
+                        <div class="input-group">
+                            <label for="conn-from">From</label>
+                            <input type="text" id="conn-from" placeholder="Station A" required />
+                        </div>
+                        <div class="input-group">
+                            <label for="conn-to">To</label>
+                            <input type="text" id="conn-to" placeholder="Station B" required />
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <label for="conn-time">Time (minutes)</label>
+                        <input type="number" id="conn-time" placeholder="e.g. 5" required min="1" />
+                    </div>
+                    <button type="submit" class="btn primary-btn">Add Connection</button>
+                </form>
+            </section>
+
+            <!-- Find Path Panel -->
+            <section class="glass-panel card span-2">
+                <h2>Find Shortest Path</h2>
+                <form id="find-path-form">
+                    <div class="input-row">
+                        <div class="input-group">
+                            <label for="path-from">Origin</label>
+                            <input type="text" id="path-from" placeholder="Start Station" required />
+                        </div>
+                        <div class="input-group">
+                            <label for="path-to">Destination</label>
+                            <input type="text" id="path-to" placeholder="End Station" required />
+                        </div>
+                    </div>
+                    <button type="submit" class="btn action-btn">Find Metro Route</button>
+                </form>
+            </section>
+
+            <!-- Output / All Stations Panel -->
+            <section class="glass-panel output-panel span-2">
+                <div class="panel-header">
+                    <h2>System Output</h2>
+                    <button id="show-stations-btn" class="btn secondary-btn">List All Stations</button>
+                </div>
+                <div class="output-console" id="console-output">
+                    <span class="placeholder-text">System operational. Ready for commands...</span>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

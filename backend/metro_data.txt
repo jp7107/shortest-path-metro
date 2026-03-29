@@ -1,0 +1,26 @@
+15
+A
+8
+4
+jangid rajdhani
+kanji express
+W
+X
+lncldsn
+pali
+jpr
+nimaj
+kanji
+B
+C
+D
+A 8 5
+A B 10
+A C 50
+8 4 10
+pali nimaj 10
+pali jpr 50
+jpr nimaj 11
+jpr kanji 12
+B C 11
+C D 12
